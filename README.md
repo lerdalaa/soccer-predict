@@ -7,3 +7,4 @@ todo:
 - autocomplete teams dropdown
 - add custom starting score and minutes feature
 - responsive design for mobile
+- input error handling
