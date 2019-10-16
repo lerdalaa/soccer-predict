@@ -18,4 +18,4 @@ def process():
   return jsonify(getHUB(home, away))
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=False)
