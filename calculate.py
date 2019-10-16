@@ -16,12 +16,13 @@ def getHUB (club1, club2):
     
     g1 = [lam1**0*exp(-lam1)/factorial(0), lam1**1*exp(-lam1)/factorial(1), lam1**2*exp(-lam1)/factorial(2), lam1**3*exp(-lam1)/factorial(3), lam1**4*exp(-lam1)/factorial(4), lam1**5*exp(-lam1)/factorial(5)]
     g2 = [lam2**0*exp(-lam2)/factorial(0), lam2**1*exp(-lam2)/factorial(1), lam2**2*exp(-lam2)/factorial(2), lam2**3*exp(-lam2)/factorial(3), lam2**4*exp(-lam2)/factorial(4), lam2**5*exp(-lam2)/factorial(5)]
-    
+    g1[5] = 1-(g1[0]+g1[1]+g1[2]+g1[3]+g1[4])
+    g2[5] = 1-(g2[0]+g2[1]+g2[2]+g2[3]+g2[4])
     h=0
     u=0
     b=0
-    for i in range(5):
-        for j in range(5):
+    for i in range(6):
+        for j in range(6):
             if i > j:
                 h += g1[i]*g2[j]
             elif i == j:
