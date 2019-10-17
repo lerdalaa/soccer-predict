@@ -3,7 +3,8 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
   color: green;
   margin-bottom: 1em;
 }
