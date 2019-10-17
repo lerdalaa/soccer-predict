@@ -2,10 +2,11 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <title>SP</title>
+    <title>Soccer prediction</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/icon type">
     <script>
         var teams = {{ teams|tojson }};
         console.log(teams);
@@ -15,7 +16,7 @@
   <body>
     <div class="container">
       <h1>Soccer prediction</h1>
-      <form>
+      <form  autocomplete="off">
         <div class="teams-container">
           <input class="input" id="home" type="text" placeholder="Home team">
           <p id="vs">VS.</p>
@@ -38,5 +39,5 @@
         <p>Away victory:<br><span id="away_pc"></span>%</p>
       </div>
     </div>
-
+    
   </body>
