@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
 from math import log, factorial, exp
-from parameters import matches, clubs
 
+
+clubs = pd.read_csv('./data/spi_global_rankings.csv')
+clubs.set_index('name')
 teams = pd.Series.tolist(clubs['name'])
 
 def getHUB (club1, club2):
