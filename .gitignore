@@ -1,3 +1,1 @@
-env
-Pipfile
-PipFile.lock
+data/spi_matches.csv
