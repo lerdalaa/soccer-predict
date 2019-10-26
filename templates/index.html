@@ -7,20 +7,29 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/icon type">
-    <script>
-        var teams = {{ teams|tojson }};
-        console.log(teams);
-    </script>
   </head>
+  <script>
+    var teams = JSON.parse('{{ teams | tojson | safe}}');
+  </script>
 
   <body>
     <div class="container">
       <h1>Soccer prediction</h1>
       <form  autocomplete="off">
         <div class="teams-container">
-          <input class="input" id="home" type="text" placeholder="Home team">
+          <div class="hometeam-container">
+            <input class="input" id="home" type="text" placeholder="Home team">
+            <div id="homeMatches">
+              
+            </div>
+          </div>
           <p id="vs">VS.</p>
-          <input class="input" id="away" type="text" placeholder="Away team">
+          <div class="awayteam-container">
+            <input class="input" id="away" type="text" placeholder="Away team">
+            <div id="awayMatches">
+
+            </div>
+          </div>
         </div>
         <div>
           <button type="submit" class="calc-btn">
