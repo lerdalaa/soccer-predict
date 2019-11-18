@@ -2,6 +2,6 @@
 Check out the app at https://soccer-predict.herokuapp.com
 
 todo:
-- custom starting score and minutes feature
-- styling & responsive design for mobile
+- starting score and minutes input feature
+- design
 - input error handling
